@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from "react";
+import React, { useReducer, /*useState*/ } from "react";
 
 const TYPES = {
   INCREMENTO: "INC",
@@ -29,7 +29,7 @@ function reducer(state, action) {
       return { contador: state.contador - action.payload };
 
       case TYPES.RESET:
-      return { contador: 0 };
+      return initialState;
 
     default:
       return state;
